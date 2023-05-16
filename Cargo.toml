@@ -1,0 +1,23 @@
+[package]
+name = "sachista-chess-rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.4.0"
+oorandom = "11.1.3"
+regex = "1.8.1"
+strum = "0.25.0"
+strum_macros = "0.25.0"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+codegen-units = 1
+strip = "debuginfo"
+lto = true
+opt-level = 3
+panic = "abort"
+
+
